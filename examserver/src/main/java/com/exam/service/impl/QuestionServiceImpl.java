@@ -47,4 +47,9 @@ public class QuestionServiceImpl implements QuestionService {
         question.setQuesId(quesId);
         this.repository.delete(question);
     }
+
+    @Override
+    public Question get(Long quesId) {
+        return this.repository.getOne(quesId);
+    }
 }
