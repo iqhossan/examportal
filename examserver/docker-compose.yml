@@ -1,0 +1,29 @@
+version: "3.7"
+services:
+  mysqldb:
+    image: mysql:5.7
+    container_name: mysqldb
+    networks:
+      - blog-mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=exam
+      - MYSQL_USER=examuser
+      - MYSQL_PASSWORD=root
+
+  app:
+    image: iqhossan/dockerdemo_examportal:0.0.1
+    networks:
+      - blog-mysql
+    ports:
+      - 8080:8080
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:mysql://mysqldb:3306/exam?serverTimezone=UTC
+      - SPRING_DATASOURCE_USERNAME=root
+      - SPRING_DATASOURCE_PASSWORD=root
+      - SPRING_DATASOURCE_DRIVER-CLASS-NAME=com.mysql.cj.jdbc.Driver
+    depends_on:
+      - mysqldb
+
+networks:
+  blog-mysql:

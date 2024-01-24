@@ -1,0 +1,50 @@
+AWS:https://www.youtube.com/watch?v=IFdhVuQQ09k&list=PL0zysOflRCel5kT-AiGyy5oMabnlilkIS&index=50
+
+
+sudo su
+apt update
+jre
+jdk
+mysql
+
+Create user
+grant all privileges on *.* to 'examuser'@'%' with grant option;
+
+
+mkdir project
+chmod 777 project
+
+apt install nginx
+systemctl enable nginx
+systemctl start nginx
+systemctl stop nginx
+systemctl status nginx
+
+
+file zilla
+to upload jar file
+
+
+build angular project by using command
+$ ng build --configuration=production
+
+
+
+/etc/nginx/conf.d
+vim learnwithaws.com.conf
+server{
+        listen 0.0.0.0:80;
+        root /home/ubuntu/project/examfront/browser;
+        server_name 44.210.217.106;
+        location / {
+                try_files $uri $uri/ /index.html;
+        }
+}
+
+44.210.217.106
+
+root@ip-172-31-32-205:/home/ubuntu/project/examfront# chmod +x /home/
+root@ip-172-31-32-205:/home/ubuntu/project/examfront# chmod +x /home/ubuntu/
+root@ip-172-31-32-205:/home/ubuntu/project/examfront# chmod +x /home/ubuntu/project/
+root@ip-172-31-32-205:/home/ubuntu/project/examfront# chmod +x /home/ubuntu/project/examfront/
+root@ip-172-31-32-205:/home/ubuntu/project/examfront# chmod +x /home/ubuntu/project/examfront/browser/
