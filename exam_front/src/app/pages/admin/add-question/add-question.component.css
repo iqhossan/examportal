@@ -1,0 +1,8 @@
+.w100{
+    width:100%;
+}
+
+.custom-ckeditor {
+    width: 100%;
+    min-height: 400px; /* Set the minimum height */
+}
